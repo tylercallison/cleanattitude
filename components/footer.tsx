@@ -1,8 +1,7 @@
-import { PropsWithChildren } from "react";
 import Container from "./container";
 import Image from "next/future/image";
 
-const Footer = (props: PropsWithChildren) => {
+const Footer = () => {
   return (
     <footer className="py-12">
       <Container>
