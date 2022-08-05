@@ -35,7 +35,7 @@ const Home = () => {
               alt="The Right Equipment"
               width={500}
               height={500}
-              className="w-full"
+              className="w-full rounded"
             />
           </Card>
           <Card
@@ -47,7 +47,7 @@ const Home = () => {
               alt="The Right Attitude"
               width={500}
               height={500}
-              className="w-full"
+              className="w-full rounded"
             />
           </Card>
           <Card
@@ -59,7 +59,7 @@ const Home = () => {
               alt="The Right Shop"
               width={500}
               height={500}
-              className="w-full"
+              className="w-full rounded"
             />
           </Card>
         </section>
@@ -70,7 +70,7 @@ const Home = () => {
             src="/images/car-parked.jpeg"
             width={1000}
             height={1000}
-            className="w-full col-span-12"
+            className="w-full col-span-12 rounded"
             alt="Parked Car"
           />
         </section>
