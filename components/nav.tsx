@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Image from "next/future/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
@@ -15,7 +16,7 @@ const NavLink = ({ title, href, route }: NavLinkProps) => {
       <a
         href={href}
         className={clsx([
-          "block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700",
+          "block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-lime-500 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700",
           {
             "dark:text-white": active,
             "text-gray-700": !active,
@@ -41,7 +42,14 @@ const Nav = () => {
   return (
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 absolute top-0 w-full">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="https://tylercallison.com/" className="flex items-center">
+        <a href="https://cleanattitude.net/" className="flex items-center">
+          <Image
+            src="/logos/ca-icon.webp"
+            alt="logo"
+            width={30}
+            height={30}
+            className="mr-2"
+          />
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
             Clean Attitude
           </span>
@@ -89,7 +97,6 @@ const Nav = () => {
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <NavLink title="Home" href="/" route={route} />
             <NavLink title="About" href="/about" route={route} />
-            <NavLink title="Works" href="/works" route={route} />
             <NavLink title="Contact" href="/contact" route={route} />
           </ul>
         </div>

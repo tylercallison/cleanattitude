@@ -4,7 +4,8 @@ import Meta from "../components/meta";
 import Container from "../components/container";
 import Nav from "../components/nav";
 import Card from "../components/card";
-import Image from "next/image";
+import Image from "next/future/image";
+import Footer from "../components/footer";
 
 const Home = () => {
   return (
@@ -28,8 +29,9 @@ const Home = () => {
             <Image
               src="/images/right-equipment.jpeg"
               alt="The Right Equipment"
-              width={50}
-              height={50}
+              width={500}
+              height={500}
+              className="w-full"
             />
           </Card>
           <Card
@@ -39,8 +41,8 @@ const Home = () => {
             <Image
               src="/images/right-attitude.jpeg"
               alt="The Right Attitude"
-              width={50}
-              height={50}
+              width={500}
+              height={500}
               className="w-full"
             />
           </Card>
@@ -51,10 +53,29 @@ const Home = () => {
             <Image
               src="/images/right-shop.jpeg"
               alt="The Right Shop"
-              width={50}
-              height={50}
+              width={500}
+              height={500}
+              className="w-full"
             />
           </Card>
+        </section>
+      </Container>
+      <Container>
+        <section className="grid grid-cols-12 container mx-auto col-span-10 justify-center lg:col-start-2 py-12">
+          <div className="col-span-12 italic">
+            Thank you for considering us for your carpet cleaning. We’ll go the
+            extra mile to ensure your satisfaction, always!
+          </div>
+        </section>
+      </Container>
+      <Container>
+        <section className="grid grid-cols-12 container mx-auto col-span-10 justify-center lg:col-start-2 pb-12">
+          <Image
+            src="/images/car-parked.jpeg"
+            width={1000}
+            height={1000}
+            className="w-full col-span-12"
+          />
         </section>
       </Container>
     </Fragment>
@@ -72,6 +93,7 @@ Home.getLayout = function getLayout(page: ReactElement) {
       />
       <Nav />
       <main>{page}</main>
+      <Footer />
     </Layout>
   );
 };
