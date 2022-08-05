@@ -7,10 +7,10 @@ type CardProps = {
 
 const Card = ({ description, title, children }: CardProps) => {
   return (
-    <div className="col-span-4 border rounded-md justify-start text-left flex bg-white hover:drop-shadow-md flex flex-col p-4">
-      <h2 className="text-lg font-medium">{title}</h2>
+    <div className="col-span-4 border rounded-md justify-start text-left flex h-min bg-white hover:drop-shadow-md mb-0 self-center flex-col p-4">
+      <h2 className="text-lg font-medium mb-2">{title}</h2>
       {children}
-      <p className="text-sm ">{description}</p>
+      <p className="text-sm mt-2">{description}</p>
     </div>
   );
 };
