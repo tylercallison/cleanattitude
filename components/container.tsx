@@ -1,8 +1,15 @@
-import { PropsWithChildren } from "react";
+import clsx from "clsx";
 
-const Container = (props: PropsWithChildren) => {
+type ContainerProps = {
+  className?: string;
+  children?: React.ReactElement | React.ReactElement[];
+};
+
+const Container = ({ children, className }: ContainerProps) => {
   return (
-    <div className="container grid grid-cols-12 mx-auto">{props.children}</div>
+    <div className={clsx([className, "w-full"])}>
+      <div className="grid grid-cols-12 mx-auto container">{children}</div>
+    </div>
   );
 };
 
