@@ -22,7 +22,8 @@ const Meta = ({ title, description, robots, keywords }: MetaProps) => {
         key="robots"
         name="robots"
         property="robots"
-        content={shouldIndex}
+        content={"noindex"}
+        // content={shouldIndex}
       />
       <link key="canonical" rel="canonical" href={href} />
       <meta
